@@ -10,9 +10,9 @@ bool openAndPrint(const char * fileName, const char * term); // return false if 
 int main(int argc, char * argv[]){
 
 	if (argc < 2){
-      printf("wgrep: searchterm [file ...]\n");
-      exit(1); // or exit(EXIT_FAILURE); portable
-   } else {
+		printf("wgrep: searchterm [file ...]\n");
+		exit(1); // or exit(EXIT_FAILURE); portable
+	} else {
 		const char * term = argv[1]; // argv[1] is the 'term' to search
 		if(argc == 2){ // a search term, but no file, is specified
 			char buffer[BUFFERSIZE];
@@ -34,7 +34,7 @@ bool openAndPrint(const char * fileName, const char * term){
 	FILE * pF;
 	char * line = NULL;
 	size_t len = 0;
-   ssize_t nread;
+	ssize_t nread;
 	
 	pF = fopen(fileName, "r");
 	if (pF == NULL){
@@ -45,7 +45,7 @@ bool openAndPrint(const char * fileName, const char * term){
 		if (strstr(line, term) != NULL) {
 			printf("%s", line);
 		} 
-   }
+	}
 	fclose(pF);	
 	return true;
 }
