@@ -49,5 +49,3 @@ bool openAndPrint(const char * fileName, const char * term){
 	fclose(pF);	
 	return true;
 }
-
-
